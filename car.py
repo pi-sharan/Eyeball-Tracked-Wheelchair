@@ -65,6 +65,8 @@ def right():
 	p.setJointMotorControl2(car, 5, p.VELOCITY_CONTROL,targetVelocity = targetVel,force = maxForce)
 	p.stepSimulation()
 
+	
+#movement function we would use. These are step functions.
 def f():
 	for i in range(800):
 		forward()
