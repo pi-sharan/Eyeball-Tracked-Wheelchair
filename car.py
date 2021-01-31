@@ -25,13 +25,8 @@ for joint in range(numJoints):
   print(p.getJointInfo(car, joint))
 
 
-maxForce = 100 #Newton: Max force to be applied to make the car move in the given velocity
+maxForce = 30 #Newton: Max force to be applied to make the car move in the given velocity
 
-def __move(car, leftFrontWheel, rightFrontWheel, leftRearWheel, rightRearWheel):
-		p.setJointMotorControl2(car,  4, p.VELOCITY_CONTROL, targetVelocity=leftFrontWheel, force=30)
-		p.setJointMotorControl2(car,  5, p.VELOCITY_CONTROL, targetVelocity=rightFrontWheel, force=30)
-		p.setJointMotorControl2(car,  6, p.VELOCITY_CONTROL, targetVelocity=leftRearWheel, force=30)
-		p.setJointMotorControl2(car,  7, p.VELOCITY_CONTROL, targetVelocity=rightRearWheel, force=30)
 
 while (1):
     keys = p.getKeyboardEvents()
