@@ -15,15 +15,13 @@ p.setGravity(0, 0, -10)
 carpos = [0, 0, 0]
 
 
-
-
 #Loading car at carpos position
 car = p.loadURDF("husky/husky.urdf", carpos[0], carpos[1], carpos[2]) #husky is urdf file of a car which comes with PyBullet
 
 
-numJoints = p.getNumJoints(car)
-for joint in range(numJoints):
-  print(p.getJointInfo(car, joint))
+# numJoints = p.getNumJoints(car)
+# for joint in range(numJoints):
+#   print(p.getJointInfo(car, joint))
 
 
 maxForce = 30 #Newton: Max force to be applied to make the car move in the given velocity
@@ -114,6 +112,6 @@ l()
 l()
 time.sleep(1)
 
-p.getContactPoints(car)
+# p.getContactPoints(car)
 
 p.disconnect()
